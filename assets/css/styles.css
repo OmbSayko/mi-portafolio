@@ -1,0 +1,607 @@
+:root {
+  --white: #fff;
+  --lightwhite: #e9e9e9;
+  --black: #000;
+  --lightblack: #0000005d;
+  --blue: #0D99FF;
+  --green: #06e0c2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: 'Fuggles', cursive;
+  font-family: 'Handlee', cursive;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--lightwhite);
+}
+
+/* Start Header */
+header {
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--white);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.080);
+  position: fixed;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.4s ease;
+}
+
+.hero-img {
+  max-width: 100%;
+  align-items: center;
+}
+
+.hero-img a,
+span {
+  max-width: 100%;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: 'Handlee', cursive;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--green);
+  transition: box-shadow 0.3s;
+}
+
+.hero-img a:hover {
+  box-shadow: 0px 2px var(--black);
+}
+
+nav {
+  justify-content: space-between;
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+nav ul {
+  display: inline-flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--black);
+  background-color: transparent;
+  border-radius: 15px;
+  font-weight: 600;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  margin: 0 44px;
+  padding: 8px 8px;
+  position: relative;
+  text-transform: uppercase;
+  transition: background-color 0.1s;
+}
+
+nav ul li a:hover {
+  color: var(--white);
+  background-color: var(--green);
+  font-weight: 800;
+  font-family: 'Handlee', cursive;
+  padding: 8px 8px;
+  border-radius: 15px;
+}
+
+nav ul li.active a {
+  color: var(--white);
+  background-color: var(--green);
+  font-weight: 800;
+  font-family: 'Handlee', cursive;
+  padding: 8px 8px;
+  border-radius: 15px;
+}
+
+/* End Header */
+
+/* Start Hero */
+.hero-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  max-width: 50%;
+  /* Para dejar un pequeño espacio entre los divs */
+  width: 50%;
+  /* El 49% del ancho del contenedor padre (section) */
+  height: 100vh;
+  background-color: var(--lightwhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 100%;
+  width: auto;
+  height: 400px;
+  position: relative;
+  animation: floatAnimation 3s infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+.right-hero {
+  background-color: var(--white);
+}
+
+.hero-content {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: inline;
+  margin: 5rem;
+}
+
+.hero-content h2 {
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.hero-content h3 {
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  text-align: left;
+  margin: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.hero-content h4 {
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  opacity: 0.3;
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.hero-content p {
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.hero-content i {
+  font-size: smaller;
+  opacity: 0.2;
+}
+
+.hero-content button {
+  cursor: pointer;
+  padding: 0.4rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: var(--green);
+  float: left;
+  margin: 0.5rem;
+  box-sizing: border-box;
+}
+
+.butt-social {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.butt-social button a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Handlee', cursive;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.butt-social button {
+  transition: box-shadow 0.3s ease;
+}
+
+.butt-social button:hover {
+  box-shadow: 0px 1px 7px 1px var(--lightblack);
+}
+
+/* End Hero */
+
+/* Start About */
+.about-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-content {
+  max-width: 50%;
+  /* Para dejar un pequeño espacio entre los divs */
+  width: 50%;
+  /* El 49% del ancho del contenedor padre (section) */
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-content-hero {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: inline;
+  margin: 5rem;
+}
+
+.about-content-hero h2 {
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+.about-content-hero p {
+  text-align: left;
+  margin: 0.5rem;
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.about-content-right {
+  background-color: var(--white);
+}
+
+.about-content-right img {
+  max-width: 100%;
+  width: auto;
+  height: 370px;
+}
+
+/* End About */
+
+/* Start Contact */
+.contact-hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-content {
+  max-width: 50%;
+  /* Para dejar un pequeño espacio entre los divs */
+  width: 50%;
+  /* El 49% del ancho del contenedor padre (section) */
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-content-main {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: inline;
+  margin: 5rem;
+}
+
+.contact-content-main h2 {
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+.contact-content-main p {
+  text-align: left;
+  margin: 0.5rem;
+  font-family: 'Handlee', cursive;
+  font-weight: 100;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.contact-content-right {
+  background-color: var(--white);
+}
+
+.contact-enter {
+  max-width: 100%;
+  width: 100%;
+}
+
+#phone, .btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 7px 40px;
+  letter-spacing: 0.2em;
+}
+
+.btn {
+  color: #ffffff;
+  background-color: #428BCA;
+  border-color: #357EBD;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.btn:focus, .btn:hover {
+  background-color: #3276B1;
+  border-color: #285E8E;
+}
+
+.btn:active {
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+.form-mex {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 30px; /* Ajusta el tamaño de la bandera según tus necesidades */
+  margin-right: 10px; /* Espacio entre la bandera y el campo de entrada */
+  margin-top: 9.2rem;
+  transform: translateX(150%);
+}
+
+.alert {
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-info {
+  border-color: #bce8f1;
+  color: #31708f;
+  background-color: #d9edf7;
+}
+
+.alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-info {
+  max-width: 269px;
+}
+/* End Contact */
+
+/* Footer */
+footer {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  align-items: flex-start;
+}
+
+.footer-container h2 {
+  color: var(--black);
+  font-size: 25px;
+  padding: 5px;
+}
+
+.tequila-footer-call {
+  display: flex;
+  flex-direction: column;
+}
+
+.tequila-footer-call p {
+  max-width: 100%;
+  width: 270px;
+  padding: 5px;
+  opacity: 0.5;
+  font-family: sans-serif;
+  text-align: left;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.contacto-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-footer h3 {
+  color: var(--black);
+  padding: 5px;
+}
+
+.contacto-footer p {
+  max-width: 100%;
+  color: var(--black);
+  text-align: left;
+  font-family: sans-serif;
+  padding: 5px;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.contacto-footer i {
+  font-size: 28px;
+  color: var(--green);
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: column;
+}
+
+.enlaces a {
+  max-width: 100%;
+  width: 95px;
+  color: var(--black);
+  padding: 5px;
+  text-align: left;
+  opacity: 0.5;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 600ms;
+}
+
+.enlaces a:hover {
+  opacity: 1;
+  transform: translateX(15px);
+}
+
+.socials {
+  max-width: 100%;
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+
+.socials a {
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  color: var(--black);
+  opacity: 1;
+  padding: 7px;
+}
+
+.socials a:hover {
+  opacity: 1;
+  color: var(--black);
+}
+
+.socials i {
+  font-size: 1.8rem;
+  margin: 0 0.2rem;
+  padding: 2px;
+  transition: all 500ms;
+  opacity: 0.3;
+}
+
+.socials i:hover {
+  opacity: 1;
+  color: var(--white);
+}
+
+.social-facebook:hover {
+  background-color: #3b5998;
+  border-radius: 6px;
+}
+
+.social-twitter:hover {
+  background-color: #1DA1F2;
+  border-radius: 6px;
+}
+
+.social-instagram:hover {
+  background: linear-gradient(45deg, #fdf497 3%, #fd5949 25%, #d6249f 40%, #285AEB 95%);
+  border-radius: 6px;
+}
+
+.copyright {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  margin: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.copyright hr {
+  max-width: 100%;
+  margin-bottom: 40px;
+  width: 98%;
+  height: 0.1px;
+  opacity: 0.1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright p {
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.5;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.copyright a {
+  color: var(--black);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.copyright a:hover {
+  color: var(--black);
+  box-shadow: 0px 2px var(--black);
+}
+
+/* End Footer */
+
+/* Extras */
+.head-main h2 {
+  color: var(--black) !important;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+}
+
+.head-main hr {
+  max-width: 100%;
+  width: 4rem;
+  border-color: var(--green);
+  opacity: 0.7;
+  margin: 0 9px;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+/* Extras */
